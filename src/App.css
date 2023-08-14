@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@keyframes slideOut {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.menu-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  position: relative;
+  background-color: #666666;
+  color:#eeeeee;
+  margin: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-btn {
+  border: none;
+  background: #666666;
+  font-size: 45px;
+  color: #eeeeee;
+}
+
+table {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.card-row {
+  display: flex;
+  height: 48px;
+  border-bottom: 2px solid black;
+  align-items: center;
+  justify-content: space-between;
+}
+
+tr:nth-child(odd) {
+  background-color: #eeeeee;
+}
+
+td {
+  padding: 10px;
+}
+
+.MuiDrawer-paper {
+  z-index: 1;
+  position: fixed;
+  background-color: #073763 !important;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  overflow:hidden;
 }
 
-.App-link {
-  color: #61dafb;
+
+.exit-btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #073763;
+  border: none;
+  font-size: 20px;
+  color: #eeeeee;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+img {
+  border-radius: 15px;
+}
+
+.avatar-name {
+  font-size: 24px;
+  color: #eeeeee;
+  margin: 10px;
+}
+
+.logout-link {
+  position: absolute;
+  bottom: 0;
+  color: #9fc5e8;
 }
